@@ -1,0 +1,101 @@
+.banner {
+  width: 100%;
+  height: 400px; /* Makes the banner full viewport height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire area without stretching */
+}
+
+.introduction {
+  max-width: 800px; /* Limiting width for better readability */
+  margin: 20px auto; /* Centering the container */
+  text-align: center; /* Centering text inside the container */
+}
+
+.intro-heading {
+  font-size: 24px; /* Larger font for heading */
+  font-weight: bold; /* Bold text for emphasis */
+  color: #333; /* Dark color for text */
+  margin-bottom: 15px; /* Space below the heading */
+}
+
+.intro {
+  font-size: 16px; /* Standard font size for readability */
+  line-height: 1.6; /* Spacing between lines for better readability */
+  color: #555; /* Slightly lighter color for body text */
+}
+
+.intro br {
+  margin: 10px 0; /* Space around line breaks */
+}
+
+/* Contact Us Css */
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-image: url("../assets/Quote.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.form-container h2 {
+    margin-bottom: 15px;
+}
+
+.address-box {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 5px;
+  width: 300px;
+  height: 250px;
+}
+
+.subtitle {
+  color: red;
+}
+
+.form-container {
+  width: 400px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field,
+.textarea-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.textarea-field {
+  height: 100px;
+}
+
+.recaptcha {
+  margin: 10px 0;
+}
+
+.submit-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,43 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: whitesmoke; /* Set background color for header */
+}
+
+.img img {
+  width: 50px; /* Set the logo width */
+  height: auto; /* Keep logo aspect ratio */
+}
+
+.items {
+  list-style-type: none; /* Remove default list styling */
+  width: 230px;
+  padding: 0; /* Remove padding */
+  display: flex; /* Display items in a row */
+  justify-content: space-between; /* Space items evenly */
+  font-size: larger;
+}
+
+.items li {
+  margin: 0 15px; /* Add space between items */
+}
+
+.items a {
+  text-decoration: none; /* Remove underline from links */
+  color: #007bff; /* Link color */
+  font-weight: bold; /* Bold font for links */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.product {
+  margin-right: 45px;
+}
