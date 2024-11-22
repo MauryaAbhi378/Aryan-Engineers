@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ProductList.css";
 import products from "../products";
 
 const ProductList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [productsPerPage, setProductsPerPage] = useState(9); // Default to 9 products per page
 
-  const productsPerPage = 9; // Display 9 products per page
+  // Update productsPerPage based on screen size
+  useEffect(() => {
+    const updateProductsPerPage = () => {
+      if (window.innerWidth <= 480) {
+        setProductsPerPage(3); // 4 products per page for mobile
+      } else {
+        setProductsPerPage(9); // Default for larger screens
+      }
+    };
+
+    updateProductsPerPage();
+    window.addEventListener("resize", updateProductsPerPage);
+
+    return () => window.removeEventListener("resize", updateProductsPerPage);
+  }, []);
 
   // Get unique categories from products
   const categories = ["All", ...new Set(products.map((product) => product.category))];

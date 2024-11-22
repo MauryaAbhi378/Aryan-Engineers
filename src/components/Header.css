@@ -13,8 +13,32 @@
   background-color: whitesmoke; /* Set background color for header */
 }
 
+.img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.heading-info{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img .hero {
+  font-family: Arial, sans-serif;
+  font-size: 23px;
+}
+
+.img .heading {
+  font-family: Arial, sans-serif;
+  color: #3591f3;
+  font-size: 28px;
+}
+
 .img img {
-  width: 50px; /* Set the logo width */
+  width: 70px; /* Set the logo width */
   height: auto; /* Keep logo aspect ratio */
 }
 
@@ -40,4 +64,64 @@
 
 .product {
   margin-right: 45px;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 20px;
+  }
+  .list.open {
+    display: flex;
+  }
+
+  .items {
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Add space between links */
+    width: 150px;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .img {
+    gap: 10px;
+  }
+
+  .img img {
+    width: 45px;
+  }
+
+  .img .heading {
+    font-size: 22px;
+  }
+
+  .img .hero{
+    font-size: 15px;
+  }
 }

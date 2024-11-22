@@ -1,6 +1,15 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
 .banner {
   width: 100%;
-  height: 400px; /* Makes the banner full viewport height */
+  height: 400px; /* Adjust banner height for desktop */
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -10,7 +19,7 @@
 .banner img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire area without stretching */
+  object-fit: fill; /* Ensures the image covers the entire area without stretching */
 }
 
 .introduction {
@@ -36,21 +45,51 @@
   margin: 10px 0; /* Space around line breaks */
 }
 
-/* Contact Us Css */
+.product-showcase {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-showcase .heading {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.image-box {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px; /* Adjust width as needed */
+}
+
+.image-box img {
+  width: 100%; /* Make the image fill the box width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 4px;
+}
+
+/* Contact Us Styles */
 .contact-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* background-image: url("../assets/Quote.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
   padding: 20px;
   font-family: Arial, sans-serif;
-}
-
-.form-container h2 {
-    margin-bottom: 15px;
+  flex-wrap: wrap; /* Enables wrapping for smaller screens */
 }
 
 .address-box {
@@ -58,15 +97,18 @@
   padding: 15px;
   border-radius: 5px;
   width: 300px;
-  height: 250px;
-}
-
-.subtitle {
-  color: red;
+  margin-bottom: 20px;
+  height: 300px;
+  display: grid;
 }
 
 .form-container {
   width: 400px;
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .contact-form {
@@ -87,10 +129,6 @@
   height: 100px;
 }
 
-.recaptcha {
-  margin: 10px 0;
-}
-
 .submit-button {
   padding: 10px;
   background-color: #007bff;
@@ -98,4 +136,66 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner {
+    height: 300px; /* Adjust banner height for tablets and smaller screens */
+  }
+
+  .intro-heading {
+    font-size: 20px; /* Adjust heading size for smaller screens */
+  }
+
+  .intro {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container,
+  .address-box {
+    width: 100%;
+    max-width: 400px; /* Ensure content doesn't stretch too wide */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 200px; /* Further reduce banner height for mobile screens */
+  }
+
+  .intro-heading {
+    font-size: 18px; /* Smaller font size for mobile */
+  }
+  .image-gallery {
+    justify-content: center;
+  }
+
+  .image-box {
+    width: 45%; /* Adjust width to fit two products per row */
+  }
+
+  .intro {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .submit-button {
+    padding: 8px;
+    font-size: 14px; /* Adjust button size for mobile */
+  }
+
+  .contact-container {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
 }

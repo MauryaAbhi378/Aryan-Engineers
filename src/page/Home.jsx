@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import banner from "../assets/fittings-banner.jpg";
 import "./Home.css";
+import HMAdaptor from "../assets/hose-male-adaptor.jpg";
+import MBTeeOD from "../assets/male-branch-teeOD.jpg";
+import EUCross from "../assets/equal-union-cross.jpg";
+import UElbow from "../assets/union-elbowf.jpg";
 
 const Home = () => {
   const [result, setResult] = useState("");
@@ -50,21 +54,35 @@ const Home = () => {
           reliability, durability, and excellence in every fitting we create.
         </p>
       </div>
+      <div className="product-showcase">
+        <div className="heading">Product Display</div>
+        <div className="image-gallery">
+          <div className="image-box">
+            <img src={HMAdaptor} alt="HM Adaptor" />
+          </div>
+          <div className="image-box">
+            <img src={MBTeeOD} alt="MB Tee OD" />
+          </div>
+          <div className="image-box">
+            <img src={EUCross} alt="EU Cross" />
+          </div>
+          <div className="image-box">
+            <img src={UElbow} alt="U Elbow" />
+          </div>
+        </div>
+      </div>
       <div className="contact-container">
         <div className="address-box">
           <p>Aryan Engineers</p>
-          <p>Unit No 103 Shiva Industrial Estate,</p>
-          <p>
-            Lake Road, near Tata Power House, Bhandup - West, Mumbai-400078,
-            Maharashtra, India.
-          </p>
+          <p>W-40, TTC Indl Area, MIDC,</p>
+          <p>Rabale, Navi Mumbai, Dist. Thane -400701</p>
           <p>📞 +91 9892722747</p>
           <p>📞 +91 8104826436</p>
           <p>
-            📧 <a href="mailto:surajentp999@gmail.com"></a>
+            📧 <a href="mailto:aryanengineers40@gmail.com">aryanengineers40@gmail.com</a>
           </p>
           <p>
-            📧 <a href="mailto:sales@surajvalves.com">abhim0505@gmail.com</a>
+            📧 <a href="mailto:abhim0505@gmail.com">abhim0505@gmail.com</a>
           </p>
         </div>
 
