@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo.webp";
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="img">
-        <img src={Logo} alt="Aryan Engineers" />
+        <img src={'/assets/Logo1.webp'}alt="Aryan Engineers" />
         <div className="heading-info">
           <span className="heading">Aryan Engineers</span>
           <span className="hero">Manufacture of Instrument Fittings</span>

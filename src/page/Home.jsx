@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import banner from "../assets/fittings-banner.jpg";
 import "./Home.css";
-import HMAdaptor from "../assets/hose-male-adaptor.jpg";
-import MBTeeOD from "../assets/male-branch-teeOD.jpg";
-import EUCross from "../assets/equal-union-cross.jpg";
-import UElbow from "../assets/union-elbowf.jpg";
 
 const Home = () => {
   const [result, setResult] = useState("");
@@ -34,7 +29,7 @@ const Home = () => {
   return (
     <div>
       <div className="banner">
-        <img src={banner} alt="Banner Img" />
+        <img src={"/assets/fittings-banner.jpg"} alt="Banner Img" />
       </div>
       <div className="introduction">
         <p className="intro-heading">Welcome To Aryan Engineers</p>
@@ -58,16 +53,16 @@ const Home = () => {
         <div className="heading">Product Display</div>
         <div className="image-gallery">
           <div className="image-box">
-            <img src={HMAdaptor} alt="HM Adaptor" />
+            <img src={"/assets/hose-male-adaptor.jpg"} alt="HM Adaptor" />
           </div>
           <div className="image-box">
-            <img src={MBTeeOD} alt="MB Tee OD" />
+            <img src={"/assets/male-branch-teeOD.jpg"} alt="MB Tee OD" />
           </div>
           <div className="image-box">
-            <img src={EUCross} alt="EU Cross" />
+            <img src={"/assets/union-crossf.jpg"} alt="EU Cross" />
           </div>
           <div className="image-box">
-            <img src={UElbow} alt="U Elbow" />
+            <img src={"/assets/bulkhead-union.jpg"} alt="U Elbow" />
           </div>
         </div>
       </div>
@@ -79,7 +74,10 @@ const Home = () => {
           <p>📞 +91 9892722747</p>
           <p>📞 +91 8104826436</p>
           <p>
-            📧 <a href="mailto:aryanengineers40@gmail.com">aryanengineers40@gmail.com</a>
+            📧{" "}
+            <a href="mailto:aryanengineers40@gmail.com">
+              aryanengineers40@gmail.com
+            </a>
           </p>
           <p>
             📧 <a href="mailto:abhim0505@gmail.com">abhim0505@gmail.com</a>
